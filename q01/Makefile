@@ -25,7 +25,7 @@ vec_red: vectorized_reduction.cpp
 # submitting the job.  It will then submit the contents of the script
 # measure_speedup.sh
 measurement: vec_red
-	bsub -W 00:05 \
+	bsub -W 00:15 \
 		-n 24 -R fullnode -R 'rusage[scratch=16]' < measure_speedup.sh
 
 clean:
