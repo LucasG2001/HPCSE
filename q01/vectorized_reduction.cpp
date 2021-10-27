@@ -130,10 +130,11 @@ static inline float sse_red_4(const float* const ary, const size_t N)
 
         x2 = _mm_load_ps(ary+i);
         y = _mm_add_ps(x2, y);
-        _mm_store_ps(z, y);
+        
         
         
     }
+    _mm_store_ps(z, y);
     sum += z[0] + z[1] + z[2] + z[3];
     return sum; // the function returns the summation of all elements in ary
 }
@@ -162,11 +163,12 @@ static inline double sse_red_2(const double* const ary, const size_t N)
 
         x2 = _mm_load_pd(ary+i);
         y = _mm_add_pd(x2,y);
-        _mm_store_pd(z, y);
+        
         
 
 
     }
+    _mm_store_pd(z, y);
     sum += z[0] + z[1];
     return sum; // the function returns the summation of all elemnts in ary
 }
