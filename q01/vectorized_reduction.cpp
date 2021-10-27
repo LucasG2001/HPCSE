@@ -121,7 +121,7 @@ static inline float sse_red_4(const float* const ary, const size_t N)
     // the xmmintrin.h header above.  The Intel intrinsics guide is a helpful
     // reference: https://software.intel.com/sites/landingpage/IntrinsicsGuide
     ///////////////////////////////////////////////////////////////////////////
-    cout << "ENTER SSE RED 4" << endl;
+   
     __m128 x2, y;
     float z[4] = { 0,0,0,0 };
     float sum = 0;
